@@ -30,31 +30,18 @@ function convertText() {
 function convertTextD() {
   try {
     let input = document.querySelector("#inputField");
-
     let output = document.querySelector("#outputField");
-
     let copy = document.querySelector("#copy");
-
     copy.style.display = "inline";
-
     output.style.display = "inline";
-
     output.style.width = "90%";
-
     document
-
       .querySelector("#outputDiv")
-
       .setAttribute("style", "background: var(--theme-box-color);");
-
     const regex = /\\n|\\r\\n|\\n\\r|\\r/g;
-
     let string = converter(input.value, setD);
-
     let temp = string.replace(/\\n/g, " <br/> ");
-
     output.innerHTML = temp;
-
     v = setD;
     if (input.value.toLowerCase() == "leftrightleftrightba") cube();
   } catch (err) {
